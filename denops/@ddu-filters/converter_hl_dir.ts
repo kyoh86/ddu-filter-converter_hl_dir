@@ -48,13 +48,13 @@ export class Filter extends BaseFilter<Params> {
       const width = ENCODER.encode(dir).length + 1;
 
       item.highlights = [
-        ...highlights,
         {
           name: HIGHLIGHT_NAME,
           col,
           width,
           hl_group: filterParams.hlGroup,
         },
+        ...highlights,
       ];
 
       return item;

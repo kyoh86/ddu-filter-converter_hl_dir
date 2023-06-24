@@ -1,4 +1,4 @@
-# ddu-filter-converter_hi_dir
+# ddu-filter-converter_hl_dir
 
 ddu.vim converter that highlights directory path of file-like items.
 

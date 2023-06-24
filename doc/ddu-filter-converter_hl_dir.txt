@@ -1,29 +1,29 @@
-*ddu-filter-converter_hi_dir.txt*
+*ddu-filter-converter_hl_dir.txt*
 
 Author: kyoh86 <me@kyoh86.dev>
 License: MIT License
-URL: https://github.com/kyoh86/ddu-filter-converter_hi_dir
+URL: https://github.com/kyoh86/ddu-filter-converter_hl_dir
 
 
 ==============================================================================
-CONTENTS                                *ddu-filter-converter_hi_dir-contents*
+CONTENTS                                *ddu-filter-converter_hl_dir-contents*
 
-Introduction                         |ddu-filter-converter_hi_dir-introdution|
-Install                              |ddu-filter-converter_hi_dir-install|
-Examples                             |ddu-filter-converter_hi_dir-examples|
-Params                               |ddu-filter-converter_hi_dir-params|
-Actions                              |ddu-filter-converter_hi_dir-actions|
-About                                |ddu-filter-converter_hi_dir-about|
+Introduction                         |ddu-filter-converter_hl_dir-introdution|
+Install                              |ddu-filter-converter_hl_dir-install|
+Examples                             |ddu-filter-converter_hl_dir-examples|
+Params                               |ddu-filter-converter_hl_dir-params|
+Actions                              |ddu-filter-converter_hl_dir-actions|
+About                                |ddu-filter-converter_hl_dir-about|
 
 
 ==============================================================================
-INTRODUCTION                         *ddu-filter-converter_hi_dir-introdution*
+INTRODUCTION                         *ddu-filter-converter_hl_dir-introdution*
 
 ddu.vim converter that highlights directory path of file-like items.
 
 
 ==============================================================================
-INSTALL                                  *ddu-filter-converter_hi_dir-install*
+INSTALL                                  *ddu-filter-converter_hl_dir-install*
 
 It depends on "|ddu|.vim" and "|denops.vim|".
 
@@ -32,7 +32,7 @@ https://github.com/vim-denops/denops.vim
 
 
 ==============================================================================
-EXAMPLES                                *ddu-filter-converter_hi_dir-examples*
+EXAMPLES                                *ddu-filter-converter_hl_dir-examples*
 
 >
 	" Use this converter for the file_rec source
@@ -66,7 +66,7 @@ EXAMPLES                                *ddu-filter-converter_hi_dir-examples*
 <
 
 ==============================================================================
-PARAMS                                    *ddu-filter-converter_hi_dir-params*
+PARAMS                                    *ddu-filter-converter_hl_dir-params*
 
 hlGroup
 	A name of the highlight-group for directory.

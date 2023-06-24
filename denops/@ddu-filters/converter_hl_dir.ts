@@ -2,14 +2,14 @@ import {
   BaseFilter,
   DduItem,
 } from "https://deno.land/x/ddu_vim@v3.2.6/types.ts";
-import { basename, dirname } from "https://deno.land/std@0.192.0/path/mod.ts";
+import { SEP_PATTERN } from "https://deno.land/std@0.192.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.2.0/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";
 const ENCODER = new TextEncoder();
 
 type Params = {
-  hlGroup: string;
+  hlGroup: string | string[];
 };
 
 function getPath(item: DduItem): string | undefined {
@@ -38,22 +38,25 @@ export class Filter extends BaseFilter<Params> {
       }
 
       // A path without parent
-      const base = basename(display);
-      if (base == display) {
-        return item;
-      }
-
-      const dir = dirname(display);
-      const col = 1;
-      const width = ENCODER.encode(dir).length + 1;
-
+      const hlGroup = (typeof filterParams.hlGroup == "string")
+        ? [filterParams.hlGroup]
+        : filterParams.hlGroup;
+      const terms = display.split(SEP_PATTERN);
+      terms.pop();
+      const dirhls = terms.reduce((pv, term, i) => {
+        const width = ENCODER.encode(term).length + 1;
+        return {
+          col: pv.col + width,
+          list: pv.list.concat([{
+            name: HIGHLIGHT_NAME,
+            col: pv.col,
+            width,
+            hl_group: hlGroup[i % hlGroup.length],
+          }]),
+        };
+      }, { col: 1, list: [] as typeof highlights });
       item.highlights = [
-        {
-          name: HIGHLIGHT_NAME,
-          col,
-          width,
-          hl_group: filterParams.hlGroup,
-        },
+        ...dirhls.list,
         ...highlights,
       ];
 

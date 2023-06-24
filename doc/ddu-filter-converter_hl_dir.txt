@@ -69,7 +69,9 @@ EXAMPLES                                *ddu-filter-converter_hl_dir-examples*
 PARAMS                                    *ddu-filter-converter_hl_dir-params*
 
 hlGroup
+	string | string[]
 	A name of the highlight-group for directory.
+	If you set a list, each path hierarchy is highlighted by each group.
 
 	default: "Directory"
 

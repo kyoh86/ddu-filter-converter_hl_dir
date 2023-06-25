@@ -33,22 +33,25 @@ export class Filter extends BaseFilter<Params> {
       const { word, display = word, highlights = [] } = item;
 
       // Already highlighted
-      if (highlights.some((item) => item.name === HIGHLIGHT_NAME)) {
+      const highlightName = `${HIGHLIGHT_NAME}_0`;
+      if (highlights.some((item) => item.name === highlightName)) {
         return item;
       }
 
-      // A path without parent
+      // Path parts
       const hlGroup = (typeof filterParams.hlGroup == "string")
         ? [filterParams.hlGroup]
         : filterParams.hlGroup;
-      const terms = display.split(SEP_PATTERN);
-      terms.pop();
-      const dirhls = terms.reduce((pv, term, i) => {
+      const parts = display.split(SEP_PATTERN);
+      parts.pop(); // trim basename
+
+      // Highlights for the path parts of directory
+      const dirhls = parts.reduce((pv, term, i) => {
         const width = ENCODER.encode(term).length + 1;
         return {
           col: pv.col + width,
           list: pv.list.concat([{
-            name: HIGHLIGHT_NAME,
+            name: `${HIGHLIGHT_NAME}_${i}`,
             col: pv.col,
             width,
             hl_group: hlGroup[i % hlGroup.length],

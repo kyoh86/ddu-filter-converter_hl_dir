@@ -48,6 +48,6 @@ jobs:
             ```
 
             </div></details>
-          branch: deno-udd
+          branch: udd-update
           author: GitHub <noreply@github.com>
           delete-branch: true

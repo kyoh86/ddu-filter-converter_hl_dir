@@ -31,7 +31,7 @@ jobs:
           UDD_RESULT="${UDD_RESULT//'%'/'%25'}"
           UDD_RESULT="${UDD_RESULT//$'\n'/'%0A'}"
           UDD_RESULT="${UDD_RESULT//$'\r'/'%0D'}"
-          echo "UDD_RESULT=$UDD_RESULT >> $GITHUB_OUTPUT"
+          echo "UDD_RESULT=$UDD_RESULT" >> $GITHUB_OUTPUT
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3

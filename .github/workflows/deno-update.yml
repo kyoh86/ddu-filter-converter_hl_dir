@@ -27,6 +27,7 @@ jobs:
         env:
           NO_COLOR: true
         run: |
+          deno run --allow-all https://deno.land/x/udd/main.ts ./**/*.ts
           UDD_RESULT="$(deno run --allow-all https://deno.land/x/udd/main.ts ./**/*.ts)"
           UDD_RESULT="${UDD_RESULT//'%'/'%25'}"
           UDD_RESULT="${UDD_RESULT//$'\n'/'%0A'}"

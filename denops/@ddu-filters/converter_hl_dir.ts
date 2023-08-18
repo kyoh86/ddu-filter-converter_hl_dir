@@ -1,8 +1,8 @@
 import {
   BaseFilter,
   DduItem,
-} from "https://deno.land/x/ddu_vim@v3.4.4/types.ts";
-import { SEP_PATTERN } from "https://deno.land/std@0.196.0/path/mod.ts";
+} from "https://deno.land/x/ddu_vim@v3.5.1/types.ts";
+import { SEP_PATTERN } from "https://deno.land/std@0.198.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.4.0/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";

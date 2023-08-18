@@ -27,12 +27,11 @@ jobs:
         env:
           NO_COLOR: true
         run: |
-          deno run --allow-all https://deno.land/x/udd/main.ts $(find . -type f | grep -E ".*\.([mc]?(ts|js)|(ts|js)x?)$" -)
           UDD_RESULT="$(deno run --allow-all https://deno.land/x/udd/main.ts $(find . -type f | grep -E ".*\.([mc]?(ts|js)|(ts|js)x?)$" -))"
           UDD_RESULT="${UDD_RESULT//'%'/'%25'}"
           UDD_RESULT="${UDD_RESULT//$'\n'/'%0A'}"
           UDD_RESULT="${UDD_RESULT//$'\r'/'%0D'}"
-          echo "UDD_RESULT=$UDD_RESULT"
+          echo "UDD_RESULT=$UDD_RESULT >> $GITHUB_OUTPUT"
 
       - name: Create pull request
         uses: peter-evans/create-pull-request@v3

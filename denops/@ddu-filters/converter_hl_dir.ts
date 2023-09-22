@@ -2,7 +2,7 @@ import {
   BaseFilter,
   DduItem,
 } from "https://deno.land/x/ddu_vim@v3.6.0/types.ts";
-import { SEP_PATTERN } from "https://deno.land/std@0.201.0/path/mod.ts";
+import { SEP_PATTERN } from "https://deno.land/std@0.202.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.6.0/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";

@@ -1,7 +1,7 @@
 import {
   BaseFilter,
   DduItem,
-} from "https://deno.land/x/ddu_vim@v3.8.1/types.ts";
+} from "https://deno.land/x/ddu_vim@v3.9.0/types.ts";
 import { SEP_PATTERN } from "https://deno.land/std@0.210.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.11.0/mod.ts";
 

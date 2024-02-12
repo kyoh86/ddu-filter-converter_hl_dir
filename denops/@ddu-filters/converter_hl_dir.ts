@@ -2,8 +2,8 @@ import {
   BaseFilter,
   DduItem,
 } from "https://deno.land/x/ddu_vim@v3.10.2/types.ts";
-import { SEP_PATTERN } from "https://deno.land/std@0.214.0/path/mod.ts";
-import { is } from "https://deno.land/x/unknownutil@v3.14.1/mod.ts";
+import { SEPARATOR_PATTERN } from "https://deno.land/std@0.215.0/path/mod.ts";
+import { is } from "https://deno.land/x/unknownutil@v3.16.0/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";
 const ENCODER = new TextEncoder();
@@ -42,7 +42,7 @@ export class Filter extends BaseFilter<Params> {
       const hlGroup = (typeof filterParams.hlGroup == "string")
         ? [filterParams.hlGroup]
         : filterParams.hlGroup;
-      const parts = display.split(SEP_PATTERN);
+      const parts = display.split(SEPARATOR_PATTERN);
       parts.pop(); // trim basename
 
       // Highlights for the path parts of directory

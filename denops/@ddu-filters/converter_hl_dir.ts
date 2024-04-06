@@ -3,7 +3,7 @@ import {
   DduItem,
 } from "https://deno.land/x/ddu_vim@v3.10.3/types.ts";
 import { SEPARATOR_PATTERN } from "https://deno.land/std@0.221.0/path/mod.ts";
-import { is } from "https://deno.land/x/unknownutil@v3.17.0/mod.ts";
+import { is } from "https://deno.land/x/unknownutil@v3.17.2/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";
 const ENCODER = new TextEncoder();

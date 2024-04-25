@@ -2,7 +2,7 @@ import {
   BaseFilter,
   DduItem,
 } from "https://deno.land/x/ddu_vim@v4.0.0/types.ts";
-import { SEPARATOR_PATTERN } from "https://deno.land/std@0.223.0/path/mod.ts";
+import { SEPARATOR_PATTERN } from "https://deno.land/std@0.224.0/path/mod.ts";
 import { is } from "https://deno.land/x/unknownutil@v3.18.0/mod.ts";
 
 const HIGHLIGHT_NAME = "ddu_dir";

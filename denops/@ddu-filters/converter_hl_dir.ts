@@ -1,9 +1,6 @@
-import {
-  BaseFilter,
-  DduItem,
-} from "https://deno.land/x/ddu_vim@v4.1.1/types.ts";
-import { SEPARATOR_PATTERN } from "https://deno.land/std@0.224.0/path/mod.ts";
-import { is } from "https://deno.land/x/unknownutil@v3.18.1/mod.ts";
+import { BaseFilter, type DduItem } from "jsr:@shougo/ddu-vim@5.0.0/types";
+import { SEPARATOR_PATTERN } from "jsr:@std/path@1.0.2";
+import { is } from "jsr:@core/unknownutil@3.18.1";
 
 const HIGHLIGHT_NAME = "ddu_dir";
 const ENCODER = new TextEncoder();

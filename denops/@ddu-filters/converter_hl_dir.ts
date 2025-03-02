@@ -1,5 +1,5 @@
-import type { DduItem } from "jsr:@shougo/ddu-vim@~10.0.0/types";
-import { BaseFilter } from "jsr:@shougo/ddu-vim@~10.0.0/filter";
+import type { DduItem } from "jsr:@shougo/ddu-vim@~10.1.0/types";
+import { BaseFilter } from "jsr:@shougo/ddu-vim@~10.1.0/filter";
 import { SEPARATOR_PATTERN } from "jsr:@std/path@~1.0.2";
 import { is } from "jsr:@core/unknownutil@~4.3.0";
 

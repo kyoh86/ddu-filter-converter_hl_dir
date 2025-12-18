@@ -1,7 +1,7 @@
-import type { DduItem } from "jsr:@shougo/ddu-vim@~11.1.0/types";
-import { BaseFilter } from "jsr:@shougo/ddu-vim@~11.1.0/filter";
-import { SEPARATOR_PATTERN } from "jsr:@std/path@~1.1.0";
-import { is } from "jsr:@core/unknownutil@~4.3.0";
+import type { DduItem } from "@shougo/ddu-vim/types";
+import { BaseFilter } from "@shougo/ddu-vim/filter";
+import { SEPARATOR_PATTERN } from "@std/path";
+import { is } from "@core/unknownutil";
 
 const HIGHLIGHT_NAME = "ddu_dir";
 const ENCODER = new TextEncoder();

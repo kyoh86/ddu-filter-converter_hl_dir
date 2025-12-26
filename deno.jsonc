@@ -5,7 +5,7 @@
   "description": "ddu.vim converter that highlights directory path of file-like items",
   "fmt": { "include": ["denops/**/*.ts", "deno.jsonc"] },
   "lint": { "include": ["denops/**/*.ts", "deno.jsonc"] },
-  "test": { "include": ["denops/**/*_test.ts", "deno.jsonc"] },
+  "test": { "include": ["denops/**/*_test.ts"] },
   "tasks": {
     "update": "deno outdated --update",
     "fmt": "deno fmt",

@@ -4,12 +4,11 @@
   "exports": {},
   "description": "ddu.vim converter that highlights directory path of file-like items",
   "fmt": { "include": ["denops/**/*.ts", "deno.jsonc"] },
-  "lint": { "include": ["denops/**/*.ts", "deno.jsonc"] },
+  "lint": { "include": ["./**/*.ts", "deno.jsonc"] },
   "test": { "include": ["denops/**/*_test.ts"] },
   "tasks": {
     "update": "deno outdated --update",
     "fmt": "deno fmt",
-    "lint": "deno lint",
     "test": "deno test --check --permit-no-files --allow-env=DENOPS_TEST_CONNECT_TIMEOUT,DENOPS_TEST_DENOPS_PATH,DENOPS_TEST_VERBOSE,DENOPS_TEST_VIM_EXECUTABLE,DENOPS_TEST_NVIM_EXECUTABLE,MSGPACKR_NATIVE_ACCELERATION_DISABLED --allow-run=vim,nvim --allow-net=127.0.0.1:0 --allow-read"
   },
   "lock": false,

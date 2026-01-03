@@ -42,7 +42,7 @@ jobs:
         run: deno check
 
       - name: Run linter
-        run: deno task lint
+        run: deno lint
 
       - name: Get Denops
         run: |

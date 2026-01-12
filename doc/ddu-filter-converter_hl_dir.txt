@@ -11,6 +11,7 @@ CONTENTS                                *ddu-filter-converter_hl_dir-contents*
 Introduction                         |ddu-filter-converter_hl_dir-introdution|
 Install                              |ddu-filter-converter_hl_dir-install|
 Examples                             |ddu-filter-converter_hl_dir-examples|
+Notes                                |ddu-filter-converter_hl_dir-notes|
 Params                               |ddu-filter-converter_hl_dir-params|
 Actions                              |ddu-filter-converter_hl_dir-actions|
 About                                |ddu-filter-converter_hl_dir-about|
@@ -66,6 +67,17 @@ EXAMPLES                                *ddu-filter-converter_hl_dir-examples*
 <
 
 ==============================================================================
+NOTES                                    *ddu-filter-converter_hl_dir-notes*
+
+This converter expects file-like items with:
+
+- item.action.path (string): required.
+- item.display (or item.word): should be the same path string.
+
+If item.action.path is missing or item.display is not a path, the highlight
+will break. Set both action.path and display on the source side.
+
+==============================================================================
 PARAMS                                    *ddu-filter-converter_hl_dir-params*
 
 hlGroup
@@ -74,6 +86,18 @@ hlGroup
 	If you set a list, each path hierarchy is highlighted by each group.
 
 	default: "Directory"
+
+==============================================================================
+ACTIONS                                *ddu-filter-converter_hl_dir-actions*
+
+This converter defines no actions.
+
+==============================================================================
+ABOUT                                    *ddu-filter-converter_hl_dir-about*
+
+Author: kyoh86 <me@kyoh86.dev>
+License: MIT License
+URL: https://github.com/kyoh86/ddu-filter-converter_hl_dir
 
 
 ==============================================================================
